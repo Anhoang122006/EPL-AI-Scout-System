@@ -24,9 +24,9 @@ engine = load_engine()
 
 # 3. Tạo 3 Tab chức năng chính
 tab1, tab2, tab3 = st.tabs([
-    "📊 So sánh Radar (Nâng cấp Bài 3)",
-    "🤖 AI Scouting - Gợi ý thay thế (Mới)",
-    "🗺️ Bản đồ Chiến thuật PCA (Nâng cấp Bài 5)"
+    "📊 So sánh Radar ",
+    "🤖 AI Scouting ",
+    "🗺️ Bản đồ Chiến thuật PCA"
 ])
 
 # =====================================================================
@@ -38,10 +38,10 @@ with tab1:
 
     player_list = sorted(engine.df['Tên cầu thủ'].unique())
     with col1:
-        p1_name = st.selectbox("Chọn Cầu thủ 1 (Khung xanh):", player_list,
+        p1_name = st.selectbox("Chọn Cầu thủ 1 (Xanh):", player_list,
                                index=player_list.index("Enzo Fernández") if "Enzo Fernández" in player_list else 0)
     with col2:
-        p2_name = st.selectbox("Chọn Cầu thủ 2 (Khung đỏ):", player_list,
+        p2_name = st.selectbox("Chọn Cầu thủ 2 (Đỏ):", player_list,
                                index=player_list.index("Mikel Merino") if "Mikel Merino" in player_list else 1)
 
     stats_to_plot = ['Gls', 'Ast', 'Min', 'CrdY', 'CrdR', 'MP']
